@@ -1,347 +1,334 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#0b0b10" />
-  <title>She Bags | روابط التواصل</title>
-  <meta name="description" content="She Bags — شنط وأحذية حريمي | واتساب، اتصال، إنستجرام، فيسبوك، تيك توك، لوكيشن." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>She Bags | شنط حريمي وإكسسوارات</title>
+  <meta name="description" content="She Bags - شنط حريمي واختيارات مميزة من الأحذية والبرفانات والإكسسوارات. اطلبي الآن عبر واتساب أو زوري فرع فيصل.">
+  <meta name="theme-color" content="#f7f3f5">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="She Bags">
+  <meta property="og:description" content="لمسة أناقة تكمّل إطلالتك">
+  <meta property="og:url" content="https://omareltony72.github.io/She-Bags/">
+  <meta property="og:image" content="https://omareltony72.github.io/She-Bags/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="She Bags">
+  <meta name="twitter:description" content="شنط حريمي واختيارات مميزة من الأحذية والبرفانات والإكسسوارات">
+  <meta name="twitter:image" content="https://omareltony72.github.io/She-Bags/logo.png">
 
   <style>
-    :root{
-      --bg:#0b0b10;
-      --card:rgba(255,255,255,.04);
-      --stroke:rgba(255,255,255,.10);
-      --text:#f6f6fb;
-      --muted:#b9b9c7;
-      --accent:#ff2fa6;
-      --accent2:#ff67c7;
-      --shadow: 0 18px 40px rgba(0,0,0,.55);
-      --r:22px;
+    :root {
+      --bg: #faf7f8;
+      --surface: #ffffff;
+      --text: #211d22;
+      --muted: #726d74;
+      --accent: #d54f95;
+      --accent-strong: #bf3c81;
+      --silver: #bcc1c9;
+      --line: #e8e1e6;
+      --shadow: 0 12px 32px rgba(42, 23, 34, 0.08);
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --radius-sm: 12px;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Tajawal", "Cairo", "Segoe UI", Tahoma, Arial, sans-serif;
+      color: var(--text);
       background:
-        radial-gradient(900px 520px at 10% -10%, rgba(255,47,166,.22), transparent 55%),
-        radial-gradient(900px 520px at 110% 10%, rgba(255,103,199,.14), transparent 60%),
-        radial-gradient(900px 520px at 40% 120%, rgba(255,47,166,.10), transparent 62%),
+        radial-gradient(480px 300px at 95% 0%, rgba(213, 79, 149, 0.15), transparent 62%),
+        radial-gradient(420px 260px at 0% 16%, rgba(188, 193, 201, 0.23), transparent 58%),
         var(--bg);
-      color:var(--text);
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:22px 14px 30px;
+      line-height: 1.6;
+      min-height: 100vh;
     }
-    .wrap{width:min(560px, 100%)}
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border:1px solid var(--stroke);
-      border-radius: var(--r);
+
+    .page {
+      width: min(960px, 100%);
+      margin: 0 auto;
+      padding: 20px 16px 28px;
+    }
+
+    .hero {
+      background: linear-gradient(145deg, #ffffff, #fdfbfd);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
       box-shadow: var(--shadow);
-      padding:18px;
-      position:relative;
-      overflow:hidden;
-      backdrop-filter: blur(6px);
-    }
-    .glow{
-      position:absolute; inset:-70px -70px auto auto;
-      width:260px; height:260px;
-      background: radial-gradient(circle, rgba(255,47,166,.28), transparent 60%);
-      filter: blur(10px);
-      pointer-events:none;
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      padding:6px 2px 14px;
-    }
-    .logo{
-      width:78px; height:78px;
-      border-radius:18px;
-      background: rgba(255,255,255,.03);
-      border:1px solid rgba(255,255,255,.09);
-      display:flex; align-items:center; justify-content:center;
-      overflow:hidden;
-      flex:0 0 auto;
-    }
-    .logo img{width:100%; height:100%; object-fit:contain; padding:6px}
-    .titles{min-width:0}
-    .titles h1{
-      margin:0;
-      font-size:22px;
-      line-height:1.2;
-      letter-spacing:.2px;
-    }
-    .titles p{
-      margin:6px 0 0;
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.6;
-    }
-    .badge{
-      display:inline-block;
-      margin-top:10px;
-      padding:7px 12px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-      color: rgba(255,255,255,.92);
-      font-size:13px;
-    }
-    .badge b{color:var(--accent2)}
-
-    .cta{
-      margin:14px 0 10px;
-      display:grid;
-      gap:10px;
-    }
-    .btn{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      padding:14px 14px;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,.11);
-      background: rgba(255,255,255,.03);
-      text-decoration:none;
-      color:var(--text);
-      transition: transform .12s ease, background .12s ease, border-color .12s ease, box-shadow .12s ease;
-      user-select:none;
-    }
-    .btn:hover{
-      transform: translateY(-1px);
-      background: rgba(255,255,255,.05);
-      border-color: rgba(255,255,255,.16);
-    }
-    .btn:active{transform: translateY(0px) scale(.99);}
-    .btnPrimary{
-      background: linear-gradient(135deg, rgba(255,47,166,.98), rgba(255,103,199,.84));
-      border-color: rgba(255,255,255,.18);
-      box-shadow: 0 12px 26px rgba(255,47,166,.18);
-    }
-    .btnPrimary:hover{
-      background: linear-gradient(135deg, rgba(255,47,166,1), rgba(255,103,199,.92));
-      box-shadow: 0 14px 30px rgba(255,47,166,.20);
-    }
-    .left{
-      display:flex; align-items:center; gap:12px;
-      min-width:0;
-    }
-    .icon{
-      width:44px; height:44px;
-      border-radius:14px;
-      background: rgba(0,0,0,.25);
-      border:1px solid rgba(255,255,255,.10);
-      display:flex; align-items:center; justify-content:center;
-      flex:0 0 auto;
-      overflow:hidden;
-    }
-    .icon img{width:28px; height:28px; object-fit:contain}
-    .txt{min-width:0}
-    .txt .title{
-      font-size:15px;
-      font-weight:700;
-      line-height:1.2;
-      margin:0 0 4px 0;
-    }
-    .txt .sub{
-      margin:0;
-      font-size:12.8px;
-      color: rgba(255,255,255,.80);
-      opacity:.92;
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
-      max-width: 330px;
-    }
-    .arrow{
-      width:28px; height:28px;
-      border-radius:12px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.03);
-      display:flex; align-items:center; justify-content:center;
-      color: rgba(255,255,255,.92);
-      flex:0 0 auto;
-      font-size:16px;
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -80px -110px auto;
+      width: 240px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(213, 79, 149, 0.22), transparent 62%);
+      pointer-events: none;
     }
 
-    .sectionTitle{
-      margin:16px 2px 10px;
-      font-size:13px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .logo-wrap {
+      width: 84px;
+      height: 84px;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: #fff;
+      display: grid;
+      place-items: center;
+      padding: 8px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+      flex: 0 0 auto;
+    }
+
+    .logo-wrap img { width: 100%; height: 100%; object-fit: contain; }
+
+    .brand h1 {
+      margin: 0;
+      font-size: clamp(1.6rem, 6.2vw, 2.1rem);
+      letter-spacing: 0.4px;
+      font-family: "Times New Roman", Georgia, serif;
+      font-weight: 700;
+    }
+
+    .tagline {
+      margin: 2px 0 0;
+      color: var(--accent-strong);
+      font-weight: 700;
+      font-size: 1.06rem;
+    }
+
+    .description {
+      margin: 10px 0 0;
       color: var(--muted);
-      letter-spacing:.2px;
-      display:flex;
-      align-items:center;
-      gap:8px;
-    }
-    .sectionTitle:before,
-    .sectionTitle:after{
-      content:"";
-      height:1px;
-      flex:1;
-      background: rgba(255,255,255,.10);
+      font-size: 1rem;
+      max-width: 54ch;
     }
 
-    .grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:10px;
+    .cta {
+      margin-top: 18px;
+      display: grid;
+      gap: 10px;
     }
-    .mini .icon{width:40px;height:40px;border-radius:14px}
-    .mini .icon img{width:26px;height:26px}
-    .mini .txt .title{font-size:14px}
-    .mini .txt .sub{display:none}
 
-    .address{
-      margin-top:12px;
-      padding:14px;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.02);
+    .btn {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      padding: 13px 16px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: transform .16s ease, box-shadow .16s ease, background-color .16s ease, border-color .16s ease;
     }
-    .address h3{
-      margin:0 0 8px;
-      font-size:14px;
-      display:flex;
-      align-items:center;
-      gap:10px;
+
+    .btn:focus-visible {
+      outline: 3px solid rgba(213, 79, 149, 0.25);
+      outline-offset: 2px;
     }
-    .address h3 img{width:22px;height:22px}
-    .address p{
-      margin:0;
-      color: rgba(255,255,255,.84);
-      line-height:1.8;
-      font-size:13.5px;
+
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      box-shadow: 0 10px 22px rgba(191, 60, 129, 0.32);
     }
-    .footer{
-      text-align:center;
-      margin-top:14px;
-      color: rgba(255,255,255,.55);
-      font-size:12.5px;
+
+    .btn-primary:hover { transform: translateY(-1px); }
+
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--text);
+      border-color: var(--line);
     }
-    .footer a{
-      color: rgba(255,255,255,.70);
-      text-decoration:none;
-      border-bottom:1px dashed rgba(255,255,255,.35);
+
+    .btn-secondary:hover {
+      transform: translateY(-1px);
+      border-color: #d7ccd4;
+      box-shadow: 0 10px 20px rgba(35,20,31,0.08);
     }
-    @media (max-width:420px){
-      .txt .sub{max-width:240px}
-      .grid{grid-template-columns:1fr}
+
+    .sections {
+      margin-top: 14px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      box-shadow: 0 8px 20px rgba(36, 17, 29, 0.05);
+      padding: 16px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.02rem;
+    }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 8px;
+    }
+
+    .social-link {
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 10px 8px;
+      text-align: center;
+      font-weight: 700;
+      background: #fff;
+      font-size: .95rem;
+      transition: border-color .16s ease, transform .16s ease;
+    }
+
+    .social-link:hover,
+    .social-link:focus-visible {
+      border-color: #d1b5c6;
+      transform: translateY(-1px);
+    }
+
+    .list { margin: 0; padding: 0; list-style: none; }
+
+    .info-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 8px;
+      align-items: start;
+      margin-bottom: 8px;
+      color: #413946;
+    }
+
+    .info-item:last-child { margin-bottom: 0; }
+
+    .bullet {
+      width: 10px;
+      height: 10px;
+      margin-top: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), #e58abc);
+      flex: 0 0 auto;
+    }
+
+    .trust li {
+      border: 1px solid #f0e5ec;
+      background: linear-gradient(180deg, #ffffff, #fffcfe);
+      border-radius: 12px;
+      padding: 10px 12px;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .trust li:last-child { margin-bottom: 0; }
+
+    footer {
+      text-align: center;
+      color: #7b757b;
+      font-size: 0.9rem;
+      margin-top: 14px;
+      padding-bottom: 10px;
+    }
+
+    @media (min-width: 700px) {
+      .page { padding-top: 32px; padding-bottom: 32px; }
+      .hero { padding: 30px; }
+      .cta {
+        grid-template-columns: 1.4fr 1fr 1fr;
+      }
+      .sections {
+        grid-template-columns: 1fr 1fr;
+      }
+      .sections .card:first-child,
+      .sections .card:last-child {
+        grid-column: 1 / -1;
+      }
     }
   </style>
 </head>
-
 <body>
-  <main class="wrap">
-    <section class="card">
-      <div class="glow"></div>
-
+  <main class="page">
+    <section class="hero" aria-labelledby="main-title">
       <div class="brand">
-        <div class="logo">
-          <img src="logo.png" alt="She Bags Logo">
+        <div class="logo-wrap">
+          <img src="logo.png" alt="She Bags logo">
         </div>
-        <div class="titles">
-          <h1>She Bags</h1>
-          <p>شنط وأحذية حريمي — اختاري ستايلك بسهولة ✨</p>
-          <span class="badge">تواصل سريع عبر <b>واتساب</b> أو تابعينا على السوشيال</span>
+        <div>
+          <h1 id="main-title" lang="en">She Bags</h1>
+          <p class="tagline">لمسة أناقة تكمّل إطلالتك</p>
         </div>
       </div>
 
-      <div class="cta">
-        <a class="btn btnPrimary" target="_blank" rel="noopener"
-           href="https://wa.me/201144532045?text=%D8%A3%D9%87%D9%84%D8%A7%20She%20Bags%20%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D9%85%D9%88%D8%AF%D9%8A%D9%84%D8%A7%D8%AA%20%D9%88%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1%20%D8%A7%D9%84%D8%B4%D9%86%D8%B7%20%D9%88%D8%A7%D9%84%D8%A3%D8%AD%D8%B0%D9%8A%D8%A9">
-          <div class="left">
-            <div class="icon"><img src="whatsapp.png" alt="WhatsApp"></div>
-            <div class="txt">
-              <p class="title">ابدأ واتساب الآن</p>
-              <p class="sub">رد سريع + صور وأسعار</p>
-            </div>
-          </div>
-          <div class="arrow">↗</div>
+      <p class="description">شنط حريمي واختيارات مميزة من الأحذية والبرفانات والإكسسوارات</p>
+
+      <div class="cta" aria-label="روابط التواصل الأساسية">
+        <a class="btn btn-primary" href="https://wa.me/201107071899" target="_blank" rel="noopener" aria-label="اطلبي الآن عبر واتساب">
+          اطلبي الآن عبر واتساب
         </a>
-
-        <a class="btn" href="tel:+201144532045">
-          <div class="left">
-            <div class="icon"><img src="telephone-call.png" alt="Call"></div>
-            <div class="txt">
-              <p class="title">اتصال مباشر</p>
-              <p class="sub">+20 114 453 2045</p>
-            </div>
-          </div>
-          <div class="arrow">📞</div>
+        <a class="btn btn-secondary" href="tel:+201107071899" aria-label="اتصلي بنا">
+          اتصلي بنا
         </a>
-      </div>
-
-      <div class="sectionTitle">السوشيال ميديا</div>
-      <div class="grid">
-        <a class="btn mini" target="_blank" rel="noopener"
-           href="https://web.facebook.com/profile.php?id=61583665201426">
-          <div class="left">
-            <div class="icon"><img src="facebook.png" alt="Facebook"></div>
-            <div class="txt">
-              <p class="title">Facebook</p>
-              <p class="sub">صفحة المحل</p>
-            </div>
-          </div>
-          <div class="arrow">↗</div>
+        <a class="btn btn-secondary" href="https://www.google.com/maps/place/30%C2%B000'13.8%22N+31%C2%B010'22.6%22E/@30.003828,31.1751227,17z/data=!3m1!4b1!4m4!3m3!8m2!3d30.003828!4d31.172934?entry=tts&g_ep=EgoyMDI1MTIwOS4wIPu8ASoASAFQAw%3D%3D&skid=31fc9f5d-cfe9-4185-8b00-139e321431df" target="_blank" rel="noopener" aria-label="موقعنا على الخريطة">
+          موقعنا على الخريطة
         </a>
-
-        <a class="btn mini" target="_blank" rel="noopener"
-           href="https://www.instagram.com/shebags84/?utm_source=qr">
-          <div class="left">
-            <div class="icon"><img src="instagram.png" alt="Instagram"></div>
-            <div class="txt">
-              <p class="title">Instagram</p>
-              <p class="sub">صور وموديلات</p>
-            </div>
-          </div>
-          <div class="arrow">↗</div>
-        </a>
-
-        <a class="btn mini" target="_blank" rel="noopener"
-           href="https://www.tiktok.com/@she.bags5?_r=1&_t=ZS-91x7p7b0wtN">
-          <div class="left">
-            <div class="icon"><img src="tektok.png" alt="TikTok"></div>
-            <div class="txt">
-              <p class="title">TikTok</p>
-              <p class="sub">فيديوهات وعروض</p>
-            </div>
-          </div>
-          <div class="arrow">↗</div>
-        </a>
-
-        <a class="btn mini" target="_blank" rel="noopener"
-           href="https://maps.app.goo.gl/gJ6LfkDAmen8Kx8k6">
-          <div class="left">
-            <div class="icon"><img src="location.png" alt="Location"></div>
-            <div class="txt">
-              <p class="title">Location</p>
-              <p class="sub">افتح على الخريطة</p>
-            </div>
-          </div>
-          <div class="arrow">📍</div>
-        </a>
-      </div>
-
-      <div class="address">
-        <h3><img src="location.png" alt=""> العنوان</h3>
-        <p>
-          فيصل – محطة حسن محمد<br>
-          بجوار بنك مصر – أبراج الشروق – الجيزة، مصر
-        </p>
-      </div>
-
-      <div class="footer">
-        © She Bags
       </div>
     </section>
+
+    <section class="sections" aria-label="معلومات إضافية">
+      <article class="card" aria-labelledby="social-title">
+        <h2 id="social-title">تابعينا على السوشيال</h2>
+        <div class="social-grid">
+          <a class="social-link" href="https://www.instagram.com/shebags84/?utm_source=qr" target="_blank" rel="noopener">Instagram</a>
+          <a class="social-link" href="https://web.facebook.com/profile.php?id=61583665201426" target="_blank" rel="noopener">Facebook</a>
+          <a class="social-link" href="https://www.tiktok.com/@she.bags5?_r=1&_t=ZS-91x7p7b0wtN" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </article>
+
+      <article class="card" aria-labelledby="business-title">
+        <h2 id="business-title">معلومات الفرع</h2>
+        <ul class="list">
+          <li class="info-item"><span class="bullet" aria-hidden="true"></span><span>العنوان: فيصل – محطة حسن محمد بجوار بنك مصر – أبراج الشروق</span></li>
+          <li class="info-item"><span class="bullet" aria-hidden="true"></span><span>مواعيد العمل: يوميًا من 11 صباحًا إلى 11 مساءً</span></li>
+          <li class="info-item"><span class="bullet" aria-hidden="true"></span><span>الهاتف: <a href="tel:+201107071899" dir="ltr">+20 110 707 1899</a></span></li>
+        </ul>
+      </article>
+
+      <article class="card" aria-labelledby="trust-title">
+        <h2 id="trust-title">ليه تختاري She Bags؟</h2>
+        <ul class="list trust">
+          <li>إرسال الصور والأسعار عبر واتساب</li>
+          <li>تحديث مستمر للموديلات</li>
+          <li>زيارة الفرع أو الطلب أونلاين</li>
+        </ul>
+      </article>
+    </section>
+
+    <footer>
+      <strong lang="en">She Bags</strong><br>
+      © <span id="year"></span> جميع الحقوق محفوظة
+    </footer>
   </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
