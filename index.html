@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>She Bags | شنط حريمي وإكسسوارات</title>
   <meta name="description" content="She Bags - شنط حريمي واختيارات مميزة من الأحذية والبرفانات والإكسسوارات. اطلبي الآن عبر واتساب أو زوري فرع فيصل.">
-  <meta name="theme-color" content="#f7f3f5">
+  <meta name="theme-color" content="#efe5ea">
   <meta property="og:type" content="website">
   <meta property="og:title" content="She Bags">
   <meta property="og:description" content="لمسة أناقة تكمّل إطلالتك">
@@ -18,18 +18,20 @@
 
   <style>
     :root {
-      --bg: #faf7f8;
+      --bg: #f8f1f4;
       --surface: #ffffff;
-      --text: #211d22;
-      --muted: #726d74;
-      --accent: #d54f95;
-      --accent-strong: #bf3c81;
-      --silver: #bcc1c9;
-      --line: #e8e1e6;
-      --shadow: 0 12px 32px rgba(42, 23, 34, 0.08);
-      --radius-lg: 24px;
-      --radius-md: 16px;
-      --radius-sm: 12px;
+      --surface-soft: #fff9fc;
+      --text: #241823;
+      --muted: #6d6270;
+      --accent: #c43d84;
+      --accent-strong: #a32f6c;
+      --chip-bg: #f7e8f0;
+      --line: #eddde6;
+      --shadow: 0 14px 36px rgba(76, 24, 52, 0.12);
+      --shadow-soft: 0 10px 24px rgba(91, 52, 73, 0.08);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 14px;
     }
 
     * { box-sizing: border-box; }
@@ -39,57 +41,76 @@
       font-family: "Tajawal", "Cairo", "Segoe UI", Tahoma, Arial, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(480px 300px at 95% 0%, rgba(213, 79, 149, 0.15), transparent 62%),
-        radial-gradient(420px 260px at 0% 16%, rgba(188, 193, 201, 0.23), transparent 58%),
-        var(--bg);
-      line-height: 1.6;
+        radial-gradient(500px 320px at 92% 2%, rgba(196, 61, 132, 0.20), transparent 64%),
+        radial-gradient(500px 320px at -2% 14%, rgba(255, 255, 255, 0.9), transparent 68%),
+        radial-gradient(430px 260px at 60% 100%, rgba(214, 183, 201, 0.26), transparent 65%),
+        linear-gradient(180deg, #fcf8fa 0%, #f4ebf0 100%);
+      line-height: 1.65;
       min-height: 100vh;
     }
 
     .page {
-      width: min(960px, 100%);
+      width: min(980px, 100%);
       margin: 0 auto;
-      padding: 20px 16px 28px;
+      padding: 20px 16px 90px;
     }
 
     .hero {
-      background: linear-gradient(145deg, #ffffff, #fdfbfd);
+      background: linear-gradient(145deg, #ffffff 0%, #fff9fc 100%);
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow);
-      padding: 22px;
+      padding: 24px 20px;
       position: relative;
       overflow: hidden;
+      text-align: center;
+      isolation: isolate;
     }
 
+    .hero::before,
     .hero::after {
       content: "";
       position: absolute;
-      inset: auto -80px -110px auto;
-      width: 240px;
-      aspect-ratio: 1;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(213, 79, 149, 0.22), transparent 62%);
+      border-radius: 999px;
       pointer-events: none;
+      z-index: -1;
+    }
+
+    .hero::before {
+      width: 240px;
+      height: 240px;
+      top: -110px;
+      right: -80px;
+      background: radial-gradient(circle, rgba(196, 61, 132, 0.28), transparent 64%);
+    }
+
+    .hero::after {
+      width: 260px;
+      height: 260px;
+      bottom: -130px;
+      left: -100px;
+      background: radial-gradient(circle, rgba(180, 145, 165, 0.24), transparent 64%);
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 14px;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
       margin-bottom: 14px;
     }
 
     .logo-wrap {
-      width: 84px;
-      height: 84px;
-      border-radius: 20px;
-      border: 1px solid var(--line);
-      background: #fff;
+      width: 118px;
+      height: 118px;
+      border-radius: 30px;
+      border: 1px solid #f0dce7;
+      background: linear-gradient(180deg, #fff 0%, #fff6fb 100%);
       display: grid;
       place-items: center;
-      padding: 8px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+      padding: 12px;
+      box-shadow: 0 14px 28px rgba(113, 57, 86, 0.18);
       flex: 0 0 auto;
     }
 
@@ -97,24 +118,42 @@
 
     .brand h1 {
       margin: 0;
-      font-size: clamp(1.6rem, 6.2vw, 2.1rem);
-      letter-spacing: 0.4px;
+      font-size: clamp(1.95rem, 8.2vw, 2.7rem);
+      letter-spacing: 0.5px;
       font-family: "Times New Roman", Georgia, serif;
       font-weight: 700;
     }
 
     .tagline {
-      margin: 2px 0 0;
+      margin: 0;
       color: var(--accent-strong);
       font-weight: 700;
-      font-size: 1.06rem;
+      font-size: 1.1rem;
     }
 
     .description {
-      margin: 10px 0 0;
+      margin: 10px auto 0;
       color: var(--muted);
-      font-size: 1rem;
+      font-size: 1.02rem;
       max-width: 54ch;
+    }
+
+    .category-chips {
+      margin: 16px 0 4px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    .chip {
+      border: 1px solid #eecfdf;
+      border-radius: 999px;
+      padding: 6px 14px;
+      background: var(--chip-bg);
+      color: #7d2e57;
+      font-weight: 700;
+      font-size: 0.93rem;
     }
 
     .cta {
@@ -138,29 +177,44 @@
       transition: transform .16s ease, box-shadow .16s ease, background-color .16s ease, border-color .16s ease;
     }
 
+    .btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+      flex: 0 0 auto;
+    }
+
     .btn:focus-visible {
-      outline: 3px solid rgba(213, 79, 149, 0.25);
+      outline: 3px solid rgba(196, 61, 132, 0.25);
       outline-offset: 2px;
     }
 
     .btn-primary {
       color: #fff;
       background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-      box-shadow: 0 10px 22px rgba(191, 60, 129, 0.32);
+      box-shadow: 0 12px 24px rgba(163, 47, 108, 0.36);
     }
 
     .btn-primary:hover { transform: translateY(-1px); }
+
+    .cta-note {
+      margin: 6px 0 0;
+      color: #8f4d70;
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-align: center;
+    }
 
     .btn-secondary {
       background: var(--surface);
       color: var(--text);
       border-color: var(--line);
+      box-shadow: var(--shadow-soft);
     }
 
     .btn-secondary:hover {
       transform: translateY(-1px);
-      border-color: #d7ccd4;
-      box-shadow: 0 10px 20px rgba(35,20,31,0.08);
+      border-color: #e1c5d4;
     }
 
     .sections {
@@ -170,16 +224,16 @@
     }
 
     .card {
-      background: var(--surface);
+      background: linear-gradient(180deg, #fff 0%, #fffbfe 100%);
       border: 1px solid var(--line);
       border-radius: var(--radius-md);
-      box-shadow: 0 8px 20px rgba(36, 17, 29, 0.05);
+      box-shadow: var(--shadow-soft);
       padding: 16px;
     }
 
     h2 {
       margin: 0 0 10px;
-      font-size: 1.02rem;
+      font-size: 1.04rem;
     }
 
     .social-grid {
@@ -203,7 +257,7 @@
 
     .social-link:hover,
     .social-link:focus-visible {
-      border-color: #d1b5c6;
+      border-color: #d8a8bf;
       transform: translateY(-1px);
     }
 
@@ -211,26 +265,34 @@
 
     .info-item {
       display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 8px;
+      grid-template-columns: 30px 1fr;
+      gap: 10px;
       align-items: start;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       color: #413946;
     }
 
     .info-item:last-child { margin-bottom: 0; }
 
-    .bullet {
-      width: 10px;
-      height: 10px;
-      margin-top: 8px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), #e58abc);
-      flex: 0 0 auto;
+    .icon-wrap {
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+      background: linear-gradient(180deg, #f9e9f1, #f7dde9);
+      display: grid;
+      place-items: center;
+      border: 1px solid #edd0de;
     }
 
-    .trust li {
-      border: 1px solid #f0e5ec;
+    .icon-wrap svg {
+      width: 16px;
+      height: 16px;
+      fill: #8b3c64;
+    }
+
+    .trust li,
+    .steps li {
+      border: 1px solid #f0e2ea;
       background: linear-gradient(180deg, #ffffff, #fffcfe);
       border-radius: 12px;
       padding: 10px 12px;
@@ -238,22 +300,47 @@
       font-weight: 600;
     }
 
-    .trust li:last-child { margin-bottom: 0; }
+    .trust li:last-child,
+    .steps li:last-child { margin-bottom: 0; }
 
     footer {
       text-align: center;
-      color: #7b757b;
-      font-size: 0.9rem;
+      color: #6f6270;
+      font-size: 0.92rem;
       margin-top: 14px;
-      padding-bottom: 10px;
+      border-top: 1px solid #ead7e1;
+      padding: 14px 10px 2px;
+      background: rgba(255, 255, 255, 0.55);
+      border-radius: 12px;
     }
 
+    .float-whatsapp {
+      position: fixed;
+      left: 16px;
+      bottom: 18px;
+      width: 54px;
+      height: 54px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: linear-gradient(145deg, #25d366, #149f4a);
+      box-shadow: 0 14px 24px rgba(9, 100, 44, 0.36);
+      z-index: 20;
+    }
+
+    .float-whatsapp svg { width: 24px; height: 24px; fill: currentColor; }
+
     @media (min-width: 700px) {
-      .page { padding-top: 32px; padding-bottom: 32px; }
-      .hero { padding: 30px; }
+      .page { padding-top: 32px; padding-bottom: 40px; }
+      .hero { padding: 30px; text-align: right; }
+      .brand { flex-direction: row; justify-content: flex-start; }
+      .description { margin-right: 0; }
+      .category-chips { justify-content: flex-start; }
       .cta {
         grid-template-columns: 1.4fr 1fr 1fr;
       }
+      .cta-note { text-align: right; }
       .sections {
         grid-template-columns: 1fr 1fr;
       }
@@ -279,17 +366,28 @@
 
       <p class="description">شنط حريمي واختيارات مميزة من الأحذية والبرفانات والإكسسوارات</p>
 
+      <div class="category-chips" aria-label="أقسام المنتجات">
+        <span class="chip">شنط</span>
+        <span class="chip">أحذية</span>
+        <span class="chip">برفانات</span>
+        <span class="chip">إكسسوارات</span>
+      </div>
+
       <div class="cta" aria-label="روابط التواصل الأساسية">
         <a class="btn btn-primary" href="https://wa.me/201107071899" target="_blank" rel="noopener" aria-label="اطلبي الآن عبر واتساب">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.89 11.89 0 0 0 12.06 0C5.5 0 .15 5.33.15 11.9c0 2.1.55 4.16 1.6 5.99L0 24l6.27-1.64a11.87 11.87 0 0 0 5.79 1.48h.01c6.57 0 11.92-5.34 11.92-11.91a11.83 11.83 0 0 0-3.47-8.45Zm-8.45 18.36h-.01a9.94 9.94 0 0 1-5.05-1.38l-.36-.21-3.72.98 1-3.63-.24-.37a9.94 9.94 0 0 1 15.4-12.24 9.93 9.93 0 0 1-7.02 16.85Zm5.45-7.44c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.08-.3-.15-1.24-.46-2.36-1.47-.87-.77-1.46-1.73-1.63-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.53.08-.8.38-.27.3-1.05 1.03-1.05 2.52s1.08 2.93 1.23 3.13c.15.2 2.12 3.24 5.14 4.55.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.18-1.42-.08-.13-.27-.2-.57-.35Z"/></svg>
           اطلبي الآن عبر واتساب
         </a>
         <a class="btn btn-secondary" href="tel:+201107071899" aria-label="اتصلي بنا">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.54 15.54 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.56 0 1 .45 1 1V20c0 .55-.44 1-1 1C10.07 21 3 13.93 3 5c0-.55.45-1 1-1h3.5c.55 0 1 .44 1 1 0 1.25.2 2.45.57 3.58.11.35.03.74-.25 1.02l-2.2 2.19Z"/></svg>
           اتصلي بنا
         </a>
         <a class="btn btn-secondary" href="https://www.google.com/maps/place/30%C2%B000'13.8%22N+31%C2%B010'22.6%22E/@30.003828,31.1751227,17z/data=!3m1!4b1!4m4!3m3!8m2!3d30.003828!4d31.172934?entry=tts&g_ep=EgoyMDI1MTIwOS4wIPu8ASoASAFQAw%3D%3D&skid=31fc9f5d-cfe9-4185-8b00-139e321431df" target="_blank" rel="noopener" aria-label="موقعنا على الخريطة">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 4.57 5.25 11.4 6.01 12.36.52.66 1.46.66 1.98 0C13.75 20.4 19 13.57 19 9c0-3.87-3.13-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg>
           موقعنا على الخريطة
         </a>
       </div>
+      <p class="cta-note">تواصلي معنا لمعرفة المتاح والأسعار</p>
     </section>
 
     <section class="sections" aria-label="معلومات إضافية">
@@ -305,27 +403,50 @@
       <article class="card" aria-labelledby="business-title">
         <h2 id="business-title">معلومات الفرع</h2>
         <ul class="list">
-          <li class="info-item"><span class="bullet" aria-hidden="true"></span><span>العنوان: فيصل – محطة حسن محمد بجوار بنك مصر – أبراج الشروق</span></li>
-          <li class="info-item"><span class="bullet" aria-hidden="true"></span><span>مواعيد العمل: يوميًا من 11 صباحًا إلى 11 مساءً</span></li>
-          <li class="info-item"><span class="bullet" aria-hidden="true"></span><span>الهاتف: <a href="tel:+201107071899" dir="ltr">+20 110 707 1899</a></span></li>
+          <li class="info-item">
+            <span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 4.57 5.25 11.4 6.01 12.36.52.66 1.46.66 1.98 0C13.75 20.4 19 13.57 19 9c0-3.87-3.13-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg></span>
+            <span>العنوان: فيصل – محطة حسن محمد بجوار بنك مصر – أبراج الشروق</span>
+          </li>
+          <li class="info-item">
+            <span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 1a11 11 0 1 0 11 11A11 11 0 0 0 12 1Zm1 11.41 3.29 3.3-1.41 1.41L11 13V6h2Z"/></svg></span>
+            <span>مواعيد العمل: يوميًا من 11 صباحًا إلى 11 مساءً</span>
+          </li>
+          <li class="info-item">
+            <span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.54 15.54 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.56 0 1 .45 1 1V20c0 .55-.44 1-1 1C10.07 21 3 13.93 3 5c0-.55.45-1 1-1h3.5c.55 0 1 .44 1 1 0 1.25.2 2.45.57 3.58.11.35.03.74-.25 1.02l-2.2 2.19Z"/></svg></span>
+            <span>الهاتف: <a href="tel:+201107071899" dir="ltr">01107071899</a></span>
+          </li>
+        </ul>
+      </article>
+
+      <article class="card" aria-labelledby="steps-title">
+        <h2 id="steps-title">كيف تطلبين؟</h2>
+        <ul class="list steps">
+          <li>1) اختاري وسيلة التواصل المناسبة</li>
+          <li>2) شاهدي الصور والتفاصيل المتاحة</li>
+          <li>3) أكدي طلبك بسهولة</li>
         </ul>
       </article>
 
       <article class="card" aria-labelledby="trust-title">
         <h2 id="trust-title">ليه تختاري She Bags؟</h2>
         <ul class="list trust">
-          <li>إرسال الصور والأسعار عبر واتساب</li>
-          <li>تحديث مستمر للموديلات</li>
-          <li>زيارة الفرع أو الطلب أونلاين</li>
+          <li>اختيارات أنيقة تناسب كل إطلالة</li>
+          <li>تفاصيل تكمّل اللوك اليومي والمناسبات</li>
+          <li>ستايل يجمع بين البساطة والتميز</li>
         </ul>
       </article>
     </section>
 
     <footer>
       <strong lang="en">She Bags</strong><br>
+      متابعة يومية لأحدث القطع والإطلالات الراقية<br>
       © <span id="year"></span> جميع الحقوق محفوظة
     </footer>
   </main>
+
+  <a class="float-whatsapp" href="https://wa.me/201107071899" target="_blank" rel="noopener" aria-label="واتساب سريع">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.89 11.89 0 0 0 12.06 0C5.5 0 .15 5.33.15 11.9c0 2.1.55 4.16 1.6 5.99L0 24l6.27-1.64a11.87 11.87 0 0 0 5.79 1.48h.01c6.57 0 11.92-5.34 11.92-11.91a11.83 11.83 0 0 0-3.47-8.45Zm-8.45 18.36h-.01a9.94 9.94 0 0 1-5.05-1.38l-.36-.21-3.72.98 1-3.63-.24-.37a9.94 9.94 0 0 1 15.4-12.24 9.93 9.93 0 0 1-7.02 16.85Z"/></svg>
+  </a>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
