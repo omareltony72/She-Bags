@@ -1,347 +1,480 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#0b0b10" />
-  <title>She Bags | روابط التواصل</title>
-  <meta name="description" content="She Bags — شنط وأحذية حريمي | واتساب، اتصال، إنستجرام، فيسبوك، تيك توك، لوكيشن." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>She Bags | شنط حريمي وإكسسوارات</title>
+  <meta name="description" content="She Bags - شنط حريمي واختيارات أنيقة من الأحذية والبرفانات والإكسسوارات. اطلبي الآن عبر واتساب.">
+  <meta name="theme-color" content="#f8f2f5">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="She Bags">
+  <meta property="og:description" content="لمسة أناقة تكمّل إطلالتك">
+  <meta property="og:url" content="https://omareltony72.github.io/She-Bags/">
+  <meta property="og:image" content="https://omareltony72.github.io/She-Bags/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="She Bags">
+  <meta name="twitter:description" content="شنط حريمي واختيارات أنيقة من الأحذية والبرفانات والإكسسوارات">
+  <meta name="twitter:image" content="https://omareltony72.github.io/She-Bags/logo.png">
 
   <style>
-    :root{
-      --bg:#0b0b10;
-      --card:rgba(255,255,255,.04);
-      --stroke:rgba(255,255,255,.10);
-      --text:#f6f6fb;
-      --muted:#b9b9c7;
-      --accent:#ff2fa6;
-      --accent2:#ff67c7;
-      --shadow: 0 18px 40px rgba(0,0,0,.55);
-      --r:22px;
+    :root {
+      --bg: #fdf8fa;
+      --bg-2: #f8f2f5;
+      --surface: #ffffff;
+      --text: #211b20;
+      --muted: #6f6670;
+      --line: #eadfe6;
+      --pink: #d35097;
+      --pink-strong: #b93f81;
+      --silver: #a7adb8;
+      --shadow-soft: 0 10px 26px rgba(60, 31, 50, 0.07);
+      --shadow-card: 0 14px 36px rgba(77, 38, 62, 0.09);
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --radius-sm: 13px;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Tajawal", "Cairo", "Segoe UI", Tahoma, Arial, sans-serif;
+      color: var(--text);
       background:
-        radial-gradient(900px 520px at 10% -10%, rgba(255,47,166,.22), transparent 55%),
-        radial-gradient(900px 520px at 110% 10%, rgba(255,103,199,.14), transparent 60%),
-        radial-gradient(900px 520px at 40% 120%, rgba(255,47,166,.10), transparent 62%),
-        var(--bg);
-      color:var(--text);
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:22px 14px 30px;
-    }
-    .wrap{width:min(560px, 100%)}
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border:1px solid var(--stroke);
-      border-radius: var(--r);
-      box-shadow: var(--shadow);
-      padding:18px;
-      position:relative;
-      overflow:hidden;
-      backdrop-filter: blur(6px);
-    }
-    .glow{
-      position:absolute; inset:-70px -70px auto auto;
-      width:260px; height:260px;
-      background: radial-gradient(circle, rgba(255,47,166,.28), transparent 60%);
-      filter: blur(10px);
-      pointer-events:none;
+        radial-gradient(340px 220px at 8% 8%, rgba(211, 80, 151, 0.17), transparent 64%),
+        radial-gradient(380px 260px at 94% 6%, rgba(167, 173, 184, 0.23), transparent 62%),
+        radial-gradient(320px 210px at 90% 88%, rgba(211, 80, 151, 0.12), transparent 60%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      min-height: 100vh;
+      line-height: 1.65;
     }
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      padding:6px 2px 14px;
-    }
-    .logo{
-      width:78px; height:78px;
-      border-radius:18px;
-      background: rgba(255,255,255,.03);
-      border:1px solid rgba(255,255,255,.09);
-      display:flex; align-items:center; justify-content:center;
-      overflow:hidden;
-      flex:0 0 auto;
-    }
-    .logo img{width:100%; height:100%; object-fit:contain; padding:6px}
-    .titles{min-width:0}
-    .titles h1{
-      margin:0;
-      font-size:22px;
-      line-height:1.2;
-      letter-spacing:.2px;
-    }
-    .titles p{
-      margin:6px 0 0;
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.6;
-    }
-    .badge{
-      display:inline-block;
-      margin-top:10px;
-      padding:7px 12px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-      color: rgba(255,255,255,.92);
-      font-size:13px;
-    }
-    .badge b{color:var(--accent2)}
-
-    .cta{
-      margin:14px 0 10px;
-      display:grid;
-      gap:10px;
-    }
-    .btn{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      padding:14px 14px;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,.11);
-      background: rgba(255,255,255,.03);
-      text-decoration:none;
-      color:var(--text);
-      transition: transform .12s ease, background .12s ease, border-color .12s ease, box-shadow .12s ease;
-      user-select:none;
-    }
-    .btn:hover{
-      transform: translateY(-1px);
-      background: rgba(255,255,255,.05);
-      border-color: rgba(255,255,255,.16);
-    }
-    .btn:active{transform: translateY(0px) scale(.99);}
-    .btnPrimary{
-      background: linear-gradient(135deg, rgba(255,47,166,.98), rgba(255,103,199,.84));
-      border-color: rgba(255,255,255,.18);
-      box-shadow: 0 12px 26px rgba(255,47,166,.18);
-    }
-    .btnPrimary:hover{
-      background: linear-gradient(135deg, rgba(255,47,166,1), rgba(255,103,199,.92));
-      box-shadow: 0 14px 30px rgba(255,47,166,.20);
-    }
-    .left{
-      display:flex; align-items:center; gap:12px;
-      min-width:0;
-    }
-    .icon{
-      width:44px; height:44px;
-      border-radius:14px;
-      background: rgba(0,0,0,.25);
-      border:1px solid rgba(255,255,255,.10);
-      display:flex; align-items:center; justify-content:center;
-      flex:0 0 auto;
-      overflow:hidden;
-    }
-    .icon img{width:28px; height:28px; object-fit:contain}
-    .txt{min-width:0}
-    .txt .title{
-      font-size:15px;
-      font-weight:700;
-      line-height:1.2;
-      margin:0 0 4px 0;
-    }
-    .txt .sub{
-      margin:0;
-      font-size:12.8px;
-      color: rgba(255,255,255,.80);
-      opacity:.92;
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
-      max-width: 330px;
-    }
-    .arrow{
-      width:28px; height:28px;
-      border-radius:12px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.03);
-      display:flex; align-items:center; justify-content:center;
-      color: rgba(255,255,255,.92);
-      flex:0 0 auto;
-      font-size:16px;
+    .page {
+      width: min(980px, 100%);
+      margin: 0 auto;
+      padding: 18px 14px 88px;
     }
 
-    .sectionTitle{
-      margin:16px 2px 10px;
-      font-size:13px;
+    .hero {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--line);
+      background: linear-gradient(160deg, #fff 0%, #fffafd 100%);
+      box-shadow: var(--shadow-card);
+      padding: 22px 18px 18px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      isolation: isolate;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .hero::before {
+      width: 220px;
+      height: 220px;
+      left: -90px;
+      top: -80px;
+      background: radial-gradient(circle, rgba(211, 80, 151, 0.2), transparent 65%);
+    }
+
+    .hero::after {
+      width: 240px;
+      height: 240px;
+      right: -100px;
+      bottom: -120px;
+      background: radial-gradient(circle, rgba(167, 173, 184, 0.26), transparent 65%);
+    }
+
+    .logo-shell {
+      width: 106px;
+      height: 106px;
+      margin: 0 auto 12px;
+      border-radius: 28px;
+      background: linear-gradient(165deg, #fff, #fff6fb);
+      border: 1px solid #f0dde8;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 14px 28px rgba(130, 66, 104, 0.16);
+      padding: 10px;
+    }
+
+    .logo-shell img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .brand-title {
+      margin: 0;
+      font-family: "Times New Roman", Georgia, serif;
+      font-size: clamp(2rem, 8vw, 2.6rem);
+      line-height: 1.1;
+      letter-spacing: 0.5px;
+    }
+
+    .tagline {
+      margin: 6px 0 0;
+      color: var(--pink-strong);
+      font-weight: 700;
+      font-size: 1.08rem;
+    }
+
+    .desc {
+      margin: 10px auto 0;
       color: var(--muted);
-      letter-spacing:.2px;
-      display:flex;
-      align-items:center;
-      gap:8px;
-    }
-    .sectionTitle:before,
-    .sectionTitle:after{
-      content:"";
-      height:1px;
-      flex:1;
-      background: rgba(255,255,255,.10);
+      max-width: 34ch;
+      font-size: 1rem;
     }
 
-    .grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:10px;
+    .chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
     }
-    .mini .icon{width:40px;height:40px;border-radius:14px}
-    .mini .icon img{width:26px;height:26px}
-    .mini .txt .title{font-size:14px}
-    .mini .txt .sub{display:none}
 
-    .address{
-      margin-top:12px;
-      padding:14px;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.02);
+    .chips li {
+      border: 1px solid #e9d6e2;
+      background: linear-gradient(180deg, #fff, #fff8fc);
+      color: #604d5c;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: .88rem;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(94, 52, 76, 0.08);
     }
-    .address h3{
-      margin:0 0 8px;
-      font-size:14px;
-      display:flex;
-      align-items:center;
-      gap:10px;
+
+    .cta-stack {
+      margin-top: 14px;
+      display: grid;
+      gap: 10px;
     }
-    .address h3 img{width:22px;height:22px}
-    .address p{
-      margin:0;
-      color: rgba(255,255,255,.84);
-      line-height:1.8;
-      font-size:13.5px;
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      width: 100%;
+      padding: 13px 14px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
     }
-    .footer{
-      text-align:center;
-      margin-top:14px;
-      color: rgba(255,255,255,.55);
-      font-size:12.5px;
+
+    .btn svg { width: 18px; height: 18px; }
+
+    .btn .btn-label {
+      display: grid;
+      justify-items: center;
+      line-height: 1.3;
     }
-    .footer a{
-      color: rgba(255,255,255,.70);
-      text-decoration:none;
-      border-bottom:1px dashed rgba(255,255,255,.35);
+
+    .btn .btn-label small {
+      font-size: .73rem;
+      font-weight: 600;
+      opacity: .86;
     }
-    @media (max-width:420px){
-      .txt .sub{max-width:240px}
-      .grid{grid-template-columns:1fr}
+
+    .btn:focus-visible,
+    .social-btn:focus-visible,
+    .fab:focus-visible {
+      outline: 3px solid rgba(211, 80, 151, 0.28);
+      outline-offset: 2px;
+    }
+
+    .btn-wa {
+      color: #fff;
+      background: linear-gradient(135deg, var(--pink), var(--pink-strong));
+      box-shadow: 0 14px 28px rgba(185, 63, 129, 0.34);
+    }
+
+    .btn-wa:hover,
+    .btn-secondary:hover,
+    .social-btn:hover,
+    .fab:hover { transform: translateY(-1px); }
+
+    .wa-note {
+      margin: -2px 0 0;
+      color: #7a5870;
+      font-size: .86rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      background: #fff;
+      border-color: var(--line);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .sections {
+      margin-top: 12px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .card {
+      background: linear-gradient(165deg, #fff, #fffcfe);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+      padding: 15px;
+    }
+
+    .title {
+      margin: 0 0 10px;
+      font-size: 1.04rem;
+      font-weight: 800;
+      letter-spacing: .1px;
+    }
+
+    .title-accent {
+      color: #55304b;
+      text-shadow: 0 1px 0 #fff;
+    }
+
+    .social-grid,
+    .why-grid,
+    .steps {
+      display: grid;
+      gap: 8px;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      color: #2f2530;
+      border: 1px solid #e8dce4;
+      background: #fff;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      padding: 11px 10px;
+      transition: transform .16s ease, border-color .16s ease;
+    }
+
+    .social-btn svg,
+    .info-row svg,
+    .step svg,
+    .why-item svg { width: 18px; height: 18px; flex: 0 0 auto; }
+
+    .info-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+
+    .info-row {
+      display: grid;
+      grid-template-columns: 18px 1fr;
+      gap: 10px;
+      align-items: start;
+      color: #403543;
+      font-size: .97rem;
+      line-height: 1.75;
+    }
+
+    .info-row a { color: inherit; text-decoration: none; font-weight: 700; }
+
+    .steps .step,
+    .why-item {
+      border: 1px solid #efe2ea;
+      background: linear-gradient(180deg, #fff, #fff9fc);
+      border-radius: 12px;
+      padding: 10px 11px;
+      display: grid;
+      grid-template-columns: 18px 1fr;
+      gap: 10px;
+      align-items: center;
+      color: #4a3a48;
+      font-weight: 600;
+    }
+
+    .why-item {
+      border-color: #edd8e6;
+      background: linear-gradient(160deg, #fff, #fff6fb);
+      box-shadow: 0 7px 16px rgba(97, 48, 77, 0.08);
+    }
+
+    .footer {
+      margin-top: 12px;
+      text-align: center;
+      color: #756b75;
+      font-size: .9rem;
+      padding: 8px 0;
+    }
+
+    .footer strong {
+      display: block;
+      font-family: "Times New Roman", Georgia, serif;
+      color: #352a35;
+      margin-bottom: 2px;
+    }
+
+    .fab {
+      position: fixed;
+      bottom: 14px;
+      left: 14px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.65);
+      box-shadow: 0 12px 24px rgba(42, 21, 35, .25);
+      background: linear-gradient(135deg, var(--pink), var(--pink-strong));
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .fab svg { width: 22px; height: 22px; }
+
+    @media (min-width: 700px) {
+      .page { padding: 30px 18px 34px; }
+
+      .hero {
+        padding: 30px 28px 24px;
+      }
+
+      .desc { max-width: 60ch; }
+
+      .cta-stack {
+        grid-template-columns: 1.45fr 1fr 1fr;
+        align-items: center;
+      }
+
+      .wa-note {
+        grid-column: 1 / 2;
+        text-align: center;
+      }
+
+      .sections {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .steps,
+      .why-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+      .social-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+      .sections .card.full { grid-column: 1 / -1; }
+
+      .fab { display: none; }
     }
   </style>
 </head>
-
 <body>
-  <main class="wrap">
-    <section class="card">
-      <div class="glow"></div>
-
-      <div class="brand">
-        <div class="logo">
-          <img src="logo.png" alt="She Bags Logo">
-        </div>
-        <div class="titles">
-          <h1>She Bags</h1>
-          <p>شنط وأحذية حريمي — اختاري ستايلك بسهولة ✨</p>
-          <span class="badge">تواصل سريع عبر <b>واتساب</b> أو تابعينا على السوشيال</span>
-        </div>
+  <main class="page">
+    <section class="hero" aria-labelledby="main-title">
+      <div class="logo-shell">
+        <img src="logo.png" alt="She Bags logo">
       </div>
+      <h1 class="brand-title" id="main-title" lang="en">She Bags</h1>
+      <p class="tagline">لمسة أناقة تكمّل إطلالتك</p>
+      <p class="desc">شنط حريمي واختيارات أنيقة من الأحذية والبرفانات والإكسسوارات</p>
 
-      <div class="cta">
-        <a class="btn btnPrimary" target="_blank" rel="noopener"
-           href="https://wa.me/201144532045?text=%D8%A3%D9%87%D9%84%D8%A7%20She%20Bags%20%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D9%85%D9%88%D8%AF%D9%8A%D9%84%D8%A7%D8%AA%20%D9%88%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1%20%D8%A7%D9%84%D8%B4%D9%86%D8%B7%20%D9%88%D8%A7%D9%84%D8%A3%D8%AD%D8%B0%D9%8A%D8%A9">
-          <div class="left">
-            <div class="icon"><img src="whatsapp.png" alt="WhatsApp"></div>
-            <div class="txt">
-              <p class="title">ابدأ واتساب الآن</p>
-              <p class="sub">رد سريع + صور وأسعار</p>
-            </div>
-          </div>
-          <div class="arrow">↗</div>
+      <ul class="chips" aria-label="الفئات">
+        <li>شنط</li>
+        <li>أحذية</li>
+        <li>برفانات</li>
+        <li>إكسسوارات</li>
+      </ul>
+
+      <div class="cta-stack" aria-label="روابط التواصل الأساسية">
+        <a class="btn btn-wa" href="https://wa.me/201107071899" target="_blank" rel="noopener" aria-label="اطلبي الآن عبر واتساب">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.5A8.5 8.5 0 0 1 7.5 19l-4 1 1.1-3.7A8.5 8.5 0 1 1 20 11.5Z"/><path d="M9.5 9.7c.2-.6.4-.6.8-.6h.5c.2 0 .4.1.5.4l.7 1.5c.1.2 0 .4-.1.6l-.5.6c-.1.1-.1.3 0 .4.3.5 1 1.4 2.1 1.9.2.1.4.1.5 0l.7-.6c.2-.1.4-.2.6-.1l1.4.7c.2.1.3.3.3.5v.5c0 .4 0 .6-.5.8-.5.2-1.2.3-1.9.1-1.1-.3-2.3-1-3.4-2.1-1.1-1.1-1.9-2.3-2.2-3.4-.2-.7-.1-1.4.1-1.8Z"/></svg>
+          <span class="btn-label">اطلبي الآن عبر واتساب</span>
         </a>
-
-        <a class="btn" href="tel:+201144532045">
-          <div class="left">
-            <div class="icon"><img src="telephone-call.png" alt="Call"></div>
-            <div class="txt">
-              <p class="title">اتصال مباشر</p>
-              <p class="sub">+20 114 453 2045</p>
-            </div>
-          </div>
-          <div class="arrow">📞</div>
+        <a class="btn btn-secondary" href="tel:+201107071899" aria-label="اتصلي بنا">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.1 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.7.7 2.5a2 2 0 0 1-.5 2.1L8.1 9.5a16 16 0 0 0 6.4 6.4l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.6.6 2.5.7A2 2 0 0 1 22 16.9z"/></svg>
+          <span class="btn-label">اتصلي بنا<small dir="ltr">01107071899</small></span>
         </a>
-      </div>
-
-      <div class="sectionTitle">السوشيال ميديا</div>
-      <div class="grid">
-        <a class="btn mini" target="_blank" rel="noopener"
-           href="https://web.facebook.com/profile.php?id=61583665201426">
-          <div class="left">
-            <div class="icon"><img src="facebook.png" alt="Facebook"></div>
-            <div class="txt">
-              <p class="title">Facebook</p>
-              <p class="sub">صفحة المحل</p>
-            </div>
-          </div>
-          <div class="arrow">↗</div>
+        <a class="btn btn-secondary" href="https://www.google.com/maps/place/30%C2%B000'13.8%22N+31%C2%B010'22.6%22E/@30.003828,31.1751227,17z/data=!3m1!4b1!4m4!3m3!8m2!3d30.003828!4d31.172934?entry=tts&g_ep=EgoyMDI1MTIwOS4wIPu8ASoASAFQAw%3D%3D&skid=31fc9f5d-cfe9-4185-8b00-139e321431df" target="_blank" rel="noopener" aria-label="افتحي الموقع في الخرائط">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="btn-label">افتحي الموقع في الخرائط</span>
         </a>
-
-        <a class="btn mini" target="_blank" rel="noopener"
-           href="https://www.instagram.com/shebags84/?utm_source=qr">
-          <div class="left">
-            <div class="icon"><img src="instagram.png" alt="Instagram"></div>
-            <div class="txt">
-              <p class="title">Instagram</p>
-              <p class="sub">صور وموديلات</p>
-            </div>
-          </div>
-          <div class="arrow">↗</div>
-        </a>
-
-        <a class="btn mini" target="_blank" rel="noopener"
-           href="https://www.tiktok.com/@she.bags5?_r=1&_t=ZS-91x7p7b0wtN">
-          <div class="left">
-            <div class="icon"><img src="tektok.png" alt="TikTok"></div>
-            <div class="txt">
-              <p class="title">TikTok</p>
-              <p class="sub">فيديوهات وعروض</p>
-            </div>
-          </div>
-          <div class="arrow">↗</div>
-        </a>
-
-        <a class="btn mini" target="_blank" rel="noopener"
-           href="https://maps.app.goo.gl/gJ6LfkDAmen8Kx8k6">
-          <div class="left">
-            <div class="icon"><img src="location.png" alt="Location"></div>
-            <div class="txt">
-              <p class="title">Location</p>
-              <p class="sub">افتح على الخريطة</p>
-            </div>
-          </div>
-          <div class="arrow">📍</div>
-        </a>
-      </div>
-
-      <div class="address">
-        <h3><img src="location.png" alt=""> العنوان</h3>
-        <p>
-          فيصل – محطة حسن محمد<br>
-          بجوار بنك مصر – أبراج الشروق – الجيزة، مصر
-        </p>
-      </div>
-
-      <div class="footer">
-        © She Bags
+        <p class="wa-note">تواصلي معنا لمعرفة المتاح والأسعار</p>
       </div>
     </section>
+
+    <section class="sections" aria-label="محتوى الصفحة">
+      <article class="card full" aria-labelledby="how-title">
+        <h2 class="title title-accent" id="how-title">كيف تطلبين؟</h2>
+        <div class="steps">
+          <div class="step"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.5 12.5 11 14l3.5-4"/></svg><span>اختاري وسيلة التواصل المناسبة</span></div>
+          <div class="step"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 18v3"/></svg><span>شاهدي الصور والتفاصيل المتاحة</span></div>
+          <div class="step"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>أكدي طلبك بسهولة</span></div>
+        </div>
+      </article>
+
+      <article class="card" aria-labelledby="social-title">
+        <h2 class="title title-accent" id="social-title">تابعينا لاكتشاف أحدث الموديلات</h2>
+        <div class="social-grid">
+          <a class="social-btn" href="https://www.instagram.com/shebags84/?utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="6"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            Instagram
+          </a>
+          <a class="social-btn" href="https://web.facebook.com/profile.php?id=61583665201426" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M13.2 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.6 1.6-1.6h1.7V3c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5v2.1H7v3.2h2.5V21h3.7z"/></svg>
+            Facebook
+          </a>
+          <a class="social-btn" href="https://www.tiktok.com/@she.bags5?_r=1&_t=ZS-91x7p7b0wtN" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M14.8 3h2.7c.2 1.4 1 2.6 2.3 3.2v2.8a6.8 6.8 0 0 1-2.3-.7V14a6 6 0 1 1-6-6h.4v2.9H11a3.1 3.1 0 1 0 3.1 3.1V3z"/></svg>
+            TikTok
+          </a>
+        </div>
+      </article>
+
+      <article class="card" aria-labelledby="branch-title">
+        <h2 class="title title-accent" id="branch-title">معلومات الفرع</h2>
+        <ul class="info-list">
+          <li class="info-row">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="m21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>فيصل – محطة حسن محمد بجوار بنك مصر – أبراج الشروق</span>
+          </li>
+          <li class="info-row">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></svg>
+            <span>يوميًا من 11 صباحًا إلى 11 مساءً</span>
+          </li>
+          <li class="info-row">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.1 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.7.7 2.5a2 2 0 0 1-.5 2.1L8.1 9.5a16 16 0 0 0 6.4 6.4l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.6.6 2.5.7A2 2 0 0 1 22 16.9z"/></svg>
+            <span><a href="tel:+201107071899" dir="ltr">01107071899</a></span>
+          </li>
+        </ul>
+      </article>
+
+      <article class="card full" aria-labelledby="why-title">
+        <h2 class="title title-accent" id="why-title">لماذا تختارين She Bags؟</h2>
+        <div class="why-grid">
+          <div class="why-item"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9Z"/></svg><span>اختيارات أنيقة تناسب كل إطلالة</span></div>
+          <div class="why-item"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 8h16"/><path d="M4 16h16"/><path d="m8 4 8 16"/></svg><span>تفاصيل تكمّل اللوك اليومي والمناسبات</span></div>
+          <div class="why-item"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.8-3.6 4.5-5 8-5s6.2 1.4 8 5"/></svg><span>ستايل يجمع بين البساطة والتميز</span></div>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <strong lang="en">She Bags</strong>
+      جميع الحقوق محفوظة © 2026
+    </footer>
   </main>
+
+  <a class="fab" href="https://wa.me/201107071899" target="_blank" rel="noopener" aria-label="واتساب She Bags">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.5A8.5 8.5 0 0 1 7.5 19l-4 1 1.1-3.7A8.5 8.5 0 1 1 20 11.5Z"/><path d="M9.5 9.7c.2-.6.4-.6.8-.6h.5c.2 0 .4.1.5.4l.7 1.5c.1.2 0 .4-.1.6l-.5.6c-.1.1-.1.3 0 .4.3.5 1 1.4 2.1 1.9.2.1.4.1.5 0l.7-.6c.2-.1.4-.2.6-.1l1.4.7c.2.1.3.3.3.5v.5c0 .4 0 .6-.5.8-.5.2-1.2.3-1.9.1-1.1-.3-2.3-1-3.4-2.1-1.1-1.1-1.9-2.3-2.2-3.4-.2-.7-.1-1.4.1-1.8Z"/></svg>
+  </a>
 </body>
 </html>
-
